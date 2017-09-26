@@ -60,8 +60,7 @@ namespace PSharp.Network
                 m_lastAccessTime = value;
             }
         }
-        public 
-            new DateTime? CreationTime
+        public new DateTime? CreationTime
         {
             get
             {
