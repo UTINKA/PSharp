@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E0D6037-DD0C-4D19-81BF-48EA039167DE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PSharp</RootNamespace>
+    <AssemblyName>PSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.9\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Document.cs" />
+    <Compile Include="Encryption\AES.cs" />
+    <Compile Include="Encryption\Decrypt.cs" />
+    <Compile Include="Encryption\Encrypt.cs" />
+    <Compile Include="Encryption\Rijiandael.cs" />
+    <Compile Include="Events\ColorSelectedEventArgs.cs" />
+    <Compile Include="Events\DatabaseCreateEventArgs.cs" />
+    <Compile Include="Events\DatabaseDropEventArgs.cs" />
+    <Compile Include="Events\GameModeChangeEventArgs.cs" />
+    <Compile Include="Events\Handlers.cs" />
+    <Compile Include="Events\FilterscriptChangeEventArgs.cs" />
+    <Compile Include="Events\PlugInChangeEventArgs.cs" />
+    <Compile Include="Events\TableCreateEventArgs.cs" />
+    <Compile Include="Events\TableDropEventArgs.cs" />
+    <Compile Include="Exceptions\ConfigurationFileNotFoundException.cs" />
+    <Compile Include="Exceptions\FtpException.cs" />
+    <Compile Include="Exceptions\MySQLConnectionExcepiton.cs" />
+    <Compile Include="Exceptions\NotSupportedFileExtensionException.cs" />
+    <Compile Include="Exceptions\UnsupportedOutputObjectException.cs" />
+    <Compile Include="Exceptions\XmlTreeNodeParameterAlreadyExistsException.cs" />
+    <Compile Include="Exceptions\XmlTreeNodeUnexpectedNodeException.cs" />
+    <Compile Include="Game\DirectX\D3D9.cs" />
+    <Compile Include="Game\DirectX\D3D9Hook.cs" />
+    <Compile Include="Game\Game.cs" />
+    <Compile Include="Game\JoinServerArgs.cs" />
+    <Compile Include="Game\Server\ServerCommand.cs" />
+    <Compile Include="Interface\ICompiler.cs" />
+    <Compile Include="Interface\INetworkConnection.cs" />
+    <Compile Include="Interface\IParser.cs" />
+    <Compile Include="IO\CFGKeys.cs" />
+    <Compile Include="IO\CFGProperties.cs" />
+    <Compile Include="IO\CFGReader.cs" />
+    <Compile Include="IO\CFGWriter.cs" />
+    <Compile Include="Network\Extensions.cs" />
+    <Compile Include="Network\FtpConnection.cs" />
+    <Compile Include="Network\FtpDirectoryInfo.cs" />
+    <Compile Include="Network\FtpFileInfo.cs" />
+    <Compile Include="Network\MySQL.cs" />
+    <Compile Include="Network\Tables.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PSharp.cs" />
+    <Compile Include="Scripting\AMX\AMXArgumentList.cs" />
+    <Compile Include="Scripting\AMX\AMXCall.cs" />
+    <Compile Include="Scripting\AMX\AMXNativeCall.cs" />
+    <Compile Include="Scripting\AMX\AMXNativeInfo.cs" />
+    <Compile Include="Scripting\AMX\AMXStruct.cs" />
+    <Compile Include="Scripting\AMX\Cell.cs" />
+    <Compile Include="Scripting\AMX\CellPtr.cs" />
+    <Compile Include="Scripting\Compiler.cs" />
+    <Compile Include="Scripting\DataTypes.cs" />
+    <Compile Include="Scripting\Defines.cs" />
+    <Compile Include="Scripting\Events.cs" />
+    <Compile Include="Scripting\Functions.cs" />
+    <Compile Include="Scripting\Natives.cs" />
+    <Compile Include="Scripting\Parameters.cs" />
+    <Compile Include="Scripting\Parser.cs" />
+    <Compile Include="Scripting\Variables.cs" />
+    <Compile Include="Serialization\PSharpSerializer.cs" />
+    <Compile Include="Serialization\XML\XmlTree.cs" />
+    <Compile Include="Serialization\XML\XmlTreeNode.cs" />
+    <Compile Include="UI\Controls\NodeGraph\NodeGraphDataType.cs" />
+    <Compile Include="UI\Controls\NodeGraph\NodeGraphDataTypeBase.cs" />
+    <Compile Include="UI\Controls\NodeGraph\NodeGraphNode.cs" />
+    <Compile Include="UI\Controls\PSharpButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\ButtonStyle.cs" />
+    <Compile Include="UI\Controls\ControlState.cs" />
+    <Compile Include="UI\Renderers\LightMenuRenderer.cs" />
+    <Compile Include="UI\Renderers\VisualStudio2012LightTheme.cs" />
+    <Compile Include="Win32\FileTime.cs" />
+    <Compile Include="Win32\InternetBuffers.cs" />
+    <Compile Include="Win32\RegistryService.cs" />
+    <Compile Include="Win32\Win32FindData.cs" />
+    <Compile Include="Win32\WinApi.cs" />
+    <Compile Include="Win32\WinINet.cs" />
+    <Compile Include="Windows\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Windows\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="PSharp.licenseheader" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Windows\Tools\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

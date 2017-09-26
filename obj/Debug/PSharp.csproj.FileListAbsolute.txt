@@ -1,0 +1,12 @@
+C:\Users\Alimşah\source\XEdit\PSharp\PSharp\bin\Debug\PSharp.exe.config
+C:\Users\Alimşah\source\XEdit\PSharp\PSharp\bin\Debug\PSharp.exe
+C:\Users\Alimşah\source\XEdit\PSharp\PSharp\bin\Debug\PSharp.pdb
+C:\Users\Alimşah\source\XEdit\PSharp\PSharp\obj\Debug\PSharp.Properties.Resources.resources
+C:\Users\Alimşah\source\XEdit\PSharp\PSharp\obj\Debug\PSharp.Windows.MainWindow.resources
+C:\Users\Alimşah\source\XEdit\PSharp\PSharp\obj\Debug\PSharp.csproj.GenerateResource.Cache
+C:\Users\Alimşah\source\XEdit\PSharp\PSharp\obj\Debug\PSharp.csproj.CoreCompileInputs.cache
+C:\Users\Alimşah\source\XEdit\PSharp\PSharp\obj\Debug\PSharp.exe
+C:\Users\Alimşah\source\XEdit\PSharp\PSharp\obj\Debug\PSharp.pdb
+C:\Users\Alimşah\source\XEdit\PSharp\PSharp\obj\Debug\PSharp.csprojResolveAssemblyReference.cache
+C:\Users\Alimşah\source\XEdit\PSharp\PSharp\bin\Debug\MySql.Data.dll
+C:\Users\Alimşah\source\XEdit\PSharp\PSharp\bin\Debug\MySql.Data.xml
